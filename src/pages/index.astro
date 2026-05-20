@@ -1,0 +1,349 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const services = [
+  {
+    icon: "🎯",
+    title: "AI Lead Generation + Ads",
+    body: "Meta · Google · TikTok campaigns run by operators who've placed <b>$12M+</b> in spend. UGC creative production included.",
+  },
+  {
+    icon: "📞",
+    title: "AI Voice Caller (24/7)",
+    body: "Sub-60-second speed-to-lead. ElevenLabs voice. <b>Books, qualifies, transfers</b> hot leads to your team. Never sleeps.",
+  },
+  {
+    icon: "💾",
+    title: "Database Reactivation",
+    body: "We resurrect your <b>dead leads</b> — old form fills, ghosted prospects, no-shows. Free revenue, week one.",
+  },
+  {
+    icon: "🛠️",
+    title: "CRM Build & Integration",
+    body: "Full GoHighLevel deployment: pipelines, automations, conversion tracking, <b>TCPA/DNC compliance</b>, smart routing, KPI dashboards.",
+  },
+  {
+    icon: "🤖",
+    title: "Custom AI Agents",
+    body: "We program <b>autonomous AI bots</b> that run inside your business. Email, social, content, ops, support — the same tech we run ourselves.",
+  },
+  {
+    icon: "📊",
+    title: "Strategic Oversight",
+    body: "Weekly KPI reports. Monthly QBRs. <b>Real account owners</b> — not pods of juniors.",
+  },
+];
+
+const stats = [
+  { num: "$450M+", label: "Client Sales Volume" },
+  { num: "$12M+", label: "Ad Spend Managed" },
+  { num: "50+", label: "Industries Served" },
+  { num: "40+", label: "Combined Years" },
+];
+
+const receipts = [
+  { num: "$1.6M", label: "Pool Contractor", sub: "84 Consults" },
+  { num: "$1K", label: "PI Law", sub: "Cost-Per-Case" },
+  { num: "77×", label: "Festival", sub: "Peak ROAS" },
+  { num: "$5", label: "GLP-1", sub: "Cost-Per-Lead" },
+];
+
+const founders = [
+  {
+    name: 'Ardria "AJ" Jordan',
+    role: "Co-Founder · Sales + Network",
+    bio: "Closer. Operator. Connects $1M+ owners to growth systems that compound.",
+    initials: "AJ",
+  },
+  {
+    name: "Daniel Lee",
+    role: "Co-Founder · Delivery + Ops",
+    bio: "Runs deployment. Solar + fiber operator. Makes sure the machine ships and stays shipped.",
+    initials: "DL",
+  },
+  {
+    name: "Jeremy Garcia",
+    role: "Co-Founder · Tech & Fulfillment",
+    bio: "AI architect behind the curtain. Available under NDA after qualification.",
+    initials: "?",
+    redacted: true,
+  },
+];
+
+const calendlyUrl = "https://calendly.com/growthos-ai/intro";
+---
+
+<Layout>
+  <!-- NAV -->
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-ink-950/70 border-b border-white/5">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3">
+        <img src="/growthos-ai-logo.png" alt="GrowthOS AI" class="h-8 w-auto" />
+        <span class="font-bold tracking-tight text-cream-50">
+          GrowthOS<span class="gradient-text-gold"> AI</span>
+        </span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm text-cream-50/70">
+        <a href="#services" class="hover:text-gold-500 transition">Services</a>
+        <a href="#receipts" class="hover:text-gold-500 transition">Receipts</a>
+        <a href="#founders" class="hover:text-gold-500 transition">Founders</a>
+        <a href="#pricing" class="hover:text-gold-500 transition">Pricing</a>
+      </div>
+      <a
+        href="#book"
+        class="px-4 py-2 rounded-full bg-gold-500 text-ink-950 text-sm font-bold hover:bg-gold-600 transition"
+      >
+        Book a Call
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="relative pt-32 pb-24 overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-60"></div>
+    <div
+      class="absolute top-20 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full blur-[140px] opacity-20"
+      style="background: radial-gradient(circle, #c79a36 0%, transparent 60%);"
+    >
+    </div>
+    <div class="relative max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-4xl mx-auto">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs uppercase tracking-widest text-cream-50/70 mb-8"
+        >
+          <span class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></span>
+          AI Growth Infrastructure
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] mb-6">
+          The first $1M+ <br />comes from <span class="gradient-text-gold">speed.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-cream-50/70 leading-relaxed max-w-2xl mx-auto mb-10">
+          We build AI-powered lead generation, voice agents, and CRM systems that turn slow, leaky
+          sales operations into <b class="text-cream-50">24/7 revenue machines</b>. The same stack
+          we use to run our own companies — deployed inside yours.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="#book"
+            class="px-8 py-4 rounded-full bg-gold-500 text-ink-950 font-bold hover:bg-gold-600 transition shadow-lg shadow-gold-500/25"
+          >
+            Book a 30-min intro →
+          </a>
+          <a
+            href="#services"
+            class="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-cream-50 font-semibold hover:bg-white/10 transition"
+          >
+            See what we build
+          </a>
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+        {
+          stats.map((s) => (
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center backdrop-blur-sm">
+              <div class="text-3xl md:text-4xl font-extrabold gradient-text-gold tracking-tight">
+                {s.num}
+              </div>
+              <div class="text-xs uppercase tracking-widest text-cream-50/60 mt-2">{s.label}</div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="relative py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-16">
+        <div class="text-xs uppercase tracking-widest text-gold-500 mb-4">What we build</div>
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+          A complete growth stack. <br /><span class="text-cream-50/60"
+            >Deployed in 30 days.</span
+          >
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {
+          services.map((svc) => (
+            <div class="group relative bg-gradient-to-br from-white/[0.04] to-white/[0.01] border border-white/10 rounded-2xl p-7 hover:border-gold-500/40 transition">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-700 to-navy-600 flex items-center justify-center text-2xl mb-5 ring-1 ring-gold-500/20 group-hover:ring-gold-500/50 transition">
+                {svc.icon}
+              </div>
+              <h3 class="text-lg font-bold text-cream-50 mb-2 tracking-tight">{svc.title}</h3>
+              <p class="text-sm leading-relaxed text-cream-50/70" set:html={svc.body} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- RECEIPTS -->
+  <section id="receipts" class="relative py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-16">
+        <div class="text-xs uppercase tracking-widest text-gold-500 mb-4">Receipts</div>
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+          Numbers that move. <br /><span class="text-cream-50/60">Across niches.</span>
+        </h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {
+          receipts.map((r) => (
+            <div class="bg-gradient-to-br from-gold-500/[0.08] to-transparent border border-gold-500/20 rounded-2xl p-6">
+              <div class="text-4xl md:text-5xl font-extrabold gradient-text-gold tracking-tight">
+                {r.num}
+              </div>
+              <div class="text-sm font-semibold text-cream-50 mt-3">{r.label}</div>
+              <div class="text-xs text-cream-50/60 mt-1">{r.sub}</div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDERS -->
+  <section id="founders" class="relative py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-16">
+        <div class="text-xs uppercase tracking-widest text-gold-500 mb-4">Founders</div>
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+          Operators, not agencies. <br /><span class="text-cream-50/60"
+            >You get principals on every call.</span
+          >
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {
+          founders.map((f) => (
+            <div class="bg-white/[0.03] border border-white/10 rounded-2xl p-7 hover:border-gold-500/40 transition">
+              <div
+                class={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-extrabold mb-5 ${
+                  f.redacted
+                    ? "bg-ink-800 text-cream-50/40 ring-1 ring-white/10"
+                    : "bg-gradient-to-br from-gold-500 to-gold-700 text-ink-950"
+                }`}
+              >
+                {f.initials}
+              </div>
+              <h3 class={`text-xl font-bold tracking-tight ${f.redacted ? "text-cream-50/60" : "text-cream-50"}`}>
+                {f.name}
+              </h3>
+              <div class="text-xs uppercase tracking-widest text-gold-500 mt-1 mb-3">{f.role}</div>
+              <p class="text-sm leading-relaxed text-cream-50/70">{f.bio}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="relative py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-16">
+        <div class="text-xs uppercase tracking-widest text-gold-500 mb-4">Investment</div>
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+          Simple, locked pricing. <br /><span class="text-cream-50/60">No retainers in disguise.</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <!-- Standard -->
+        <div class="md:col-span-2 bg-gradient-to-br from-navy-700 to-ink-900 border border-white/10 rounded-3xl p-10 ring-gold">
+          <div class="text-xs uppercase tracking-widest text-gold-500 mb-4">Growth Stack</div>
+          <div class="space-y-6">
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-5">
+              <span class="text-cream-50/80">One-time setup</span>
+              <span class="text-4xl font-extrabold gradient-text-gold">$12,000</span>
+            </div>
+            <div class="flex items-baseline justify-between border-b border-white/10 pb-5">
+              <span class="text-cream-50/80">Monthly retainer</span>
+              <span class="text-4xl font-extrabold gradient-text-gold">
+                $5,000<span class="text-lg text-cream-50/50">/mo</span>
+              </span>
+            </div>
+          </div>
+          <p class="text-sm text-cream-50/60 mt-6 leading-relaxed">
+            Cancel anytime with 30 days notice. Setup includes CRM build, conversion tracking,
+            voice agent training, onboarding & pipeline mapping.
+          </p>
+          <a
+            href="#book"
+            class="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full bg-gold-500 text-ink-950 font-bold hover:bg-gold-600 transition"
+          >
+            Start onboarding →
+          </a>
+        </div>
+
+        <!-- Enterprise -->
+        <div
+          class="bg-gradient-to-br from-gold-700 to-ink-900 border border-gold-500/30 rounded-3xl p-10"
+        >
+          <div class="text-xs uppercase tracking-widest text-cream-50/80 mb-4">Enterprise</div>
+          <div class="text-3xl font-extrabold text-cream-50 mb-4 leading-tight">
+            Custom-scoped
+          </div>
+          <p class="text-sm text-cream-50/80 leading-relaxed">
+            For <b>$1M+ operators</b> needing full-stack growth infrastructure across multiple
+            channels and brands. Quoted on call.
+          </p>
+          <a
+            href="#book"
+            class="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full bg-cream-50 text-ink-950 font-bold hover:bg-white transition"
+          >
+            Scope a build →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / BOOK -->
+  <section id="book" class="relative py-32 border-t border-white/5">
+    <div class="absolute inset-0 grid-bg opacity-40"></div>
+    <div class="relative max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-6">
+        Ready to install <br /><span class="gradient-text-gold">a 24/7 revenue machine?</span>
+      </h2>
+      <p class="text-lg text-cream-50/70 max-w-2xl mx-auto mb-10 leading-relaxed">
+        30-minute intro call. We diagnose your current funnel, show you the exact stack we'd
+        deploy, and tell you straight up if we're a fit or not.
+      </p>
+      <a
+        href={calendlyUrl}
+        class="inline-flex items-center gap-2 px-10 py-5 rounded-full bg-gold-500 text-ink-950 font-bold text-lg hover:bg-gold-600 transition shadow-2xl shadow-gold-500/30"
+      >
+        📅 Book a 30-min intro
+      </a>
+      <div class="mt-6 text-xs uppercase tracking-widest text-cream-50/50">
+        Or email{" "}
+        <a class="text-gold-500 hover:underline" href="mailto:hello@growthos-ai.com"
+          >hello@growthos-ai.com</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="relative py-10 border-t border-white/5">
+    <div
+      class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-cream-50/40"
+    >
+      <div class="flex items-center gap-3">
+        <img src="/growthos-ai-logo.png" alt="GrowthOS AI" class="h-6 w-auto opacity-70" />
+        <span>© {new Date().getFullYear()} GrowthOS AI. All rights reserved.</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#services" class="hover:text-gold-500 transition">Services</a>
+        <a href="#pricing" class="hover:text-gold-500 transition">Pricing</a>
+        <a href="#book" class="hover:text-gold-500 transition">Book</a>
+      </div>
+    </div>
+  </footer>
+</Layout>

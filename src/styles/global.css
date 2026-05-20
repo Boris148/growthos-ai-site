@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-950: #05060c;
+  --color-ink-900: #0a0d18;
+  --color-ink-800: #11162a;
+  --color-ink-700: #1a2140;
+  --color-ink-600: #2a3258;
+  --color-navy-700: #0a1a36;
+  --color-navy-600: #11254d;
+  --color-gold-500: #c79a36;
+  --color-gold-600: #b8860b;
+  --color-gold-700: #8e6909;
+  --color-cream-50: #faf7f0;
+  --color-cream-100: #efe9da;
+  --color-muted: #8a93a8;
+
+  --font-display: "Plus Jakarta Sans", "Inter", system-ui, -apple-system, sans-serif;
+  --font-body: "Plus Jakarta Sans", "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background: var(--color-ink-950);
+    color: var(--color-cream-50);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background: radial-gradient(ellipse at top, rgba(17, 37, 77, 0.35) 0%, var(--color-ink-950) 55%);
+    min-height: 100dvh;
+  }
+  ::selection {
+    background: var(--color-gold-500);
+    color: var(--color-ink-950);
+  }
+}
+
+@layer utilities {
+  .gradient-text-gold {
+    background: linear-gradient(135deg, #f0c75a 0%, #c79a36 50%, #8e6909 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(199, 154, 54, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(199, 154, 54, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .ring-gold {
+    box-shadow: 0 0 0 1px rgba(199, 154, 54, 0.25), 0 30px 60px -30px rgba(199, 154, 54, 0.35);
+  }
+}
