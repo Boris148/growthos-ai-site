@@ -62,7 +62,7 @@ const founders = [
     initials: "DL",
   },
   {
-    name: "Jeremy Garcia",
+    name: "J. Garcia",
     role: "Co-Founder · Tech & Fulfillment",
     bio: "AI architect behind the curtain. Available under NDA after qualification.",
     initials: "?",
@@ -81,16 +81,12 @@ const logoSrc = `${base}/growthos-ai-logo.png`;
   <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-cream-50/85 border-b border-navy-900/8">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="#top" class="flex items-center gap-3">
-        <img src={logoSrc} alt="GrowthOS AI" class="h-8 w-auto" />
-        <span class="font-extrabold tracking-tight text-navy-900">
-          GrowthOS<span class="text-gold-600"> AI</span>
-        </span>
+        <img src={logoSrc} alt="GrowthOS AI" class="h-9 w-auto" />
       </a>
       <div class="hidden md:flex items-center gap-8 text-sm text-ink-700 font-medium">
         <a href="#services" class="hover:text-gold-600 transition">Services</a>
         <a href="#receipts" class="hover:text-gold-600 transition">Receipts</a>
         <a href="#founders" class="hover:text-gold-600 transition">Founders</a>
-        <a href="#pricing" class="hover:text-gold-600 transition">Pricing</a>
       </div>
       <a
         href="#book"
@@ -102,39 +98,39 @@ const logoSrc = `${base}/growthos-ai-logo.png`;
   </header>
 
   <!-- HERO -->
-  <section id="top" class="relative pt-32 pb-24 overflow-hidden">
+  <section id="top" class="relative pt-28 pb-16 md:pt-32 md:pb-24 overflow-hidden">
     <div class="absolute inset-0 grid-bg opacity-60"></div>
     <div
       class="absolute top-20 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full blur-[140px] opacity-30"
       style="background: radial-gradient(circle, #ecc452 0%, transparent 60%);"
     >
     </div>
-    <div class="relative max-w-7xl mx-auto px-6">
+    <div class="relative max-w-7xl mx-auto px-5 sm:px-6">
       <div class="text-center max-w-4xl mx-auto">
         <div
-          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-navy-900/10 text-xs uppercase tracking-widest text-ink-700 mb-8 shadow-sm"
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-navy-900/10 text-[10px] sm:text-xs uppercase tracking-widest text-ink-700 mb-6 sm:mb-8 shadow-sm"
         >
           <span class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></span>
           AI Growth Infrastructure
         </div>
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] mb-6 text-navy-900">
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.08] mb-5 sm:mb-6 text-navy-900">
           The first $1M+ <br />comes from <span class="gradient-text-gold">speed.</span>
         </h1>
-        <p class="text-lg md:text-xl text-ink-700 leading-relaxed max-w-2xl mx-auto mb-10">
+        <p class="text-base sm:text-lg md:text-xl text-ink-700 leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10 px-2 sm:px-0">
           We build AI-powered lead generation, voice agents, and CRM systems that turn slow, leaky
           sales operations into <b class="text-navy-900">24/7 revenue machines</b>. The same stack
           we use to run our own companies — deployed inside yours.
         </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <a
             href="#book"
-            class="px-8 py-4 rounded-full bg-navy-900 text-cream-50 font-bold hover:bg-navy-800 transition shadow-xl shadow-navy-900/25"
+            class="w-full sm:w-auto px-7 py-4 rounded-full bg-navy-900 text-cream-50 font-bold hover:bg-navy-800 transition shadow-xl shadow-navy-900/25 text-center"
           >
             Book a 30-min intro →
           </a>
           <a
             href="#services"
-            class="px-8 py-4 rounded-full bg-white border border-navy-900/10 text-navy-900 font-semibold hover:bg-cream-200 transition"
+            class="w-full sm:w-auto px-7 py-4 rounded-full bg-white border border-navy-900/10 text-navy-900 font-semibold hover:bg-cream-200 transition text-center"
           >
             See what we build
           </a>
@@ -142,14 +138,14 @@ const logoSrc = `${base}/growthos-ai-logo.png`;
       </div>
 
       <!-- STATS -->
-      <div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+      <div class="mt-16 md:mt-24 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto">
         {
           stats.map((s) => (
-            <div class="card-light rounded-2xl p-6 text-center">
-              <div class="text-3xl md:text-4xl font-extrabold gradient-text-gold tracking-tight">
+            <div class="card-light rounded-2xl p-5 md:p-6 text-center">
+              <div class="text-2xl sm:text-3xl md:text-4xl font-extrabold gradient-text-gold tracking-tight">
                 {s.num}
               </div>
-              <div class="text-xs uppercase tracking-widest text-muted mt-2 font-semibold">{s.label}</div>
+              <div class="text-[10px] sm:text-xs uppercase tracking-widest text-muted mt-2 font-semibold">{s.label}</div>
             </div>
           ))
         }
@@ -158,22 +154,22 @@ const logoSrc = `${base}/growthos-ai-logo.png`;
   </section>
 
   <!-- SERVICES -->
-  <section id="services" class="relative py-24 border-t border-navy-900/8">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="max-w-3xl mb-16">
-        <div class="text-xs uppercase tracking-widest text-gold-600 mb-4 font-bold">What we build</div>
-        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-navy-900">
+  <section id="services" class="relative py-16 md:py-24 border-t border-navy-900/8">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6">
+      <div class="max-w-3xl mb-10 md:mb-16">
+        <div class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-600 mb-3 md:mb-4 font-bold">What we build</div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-navy-900">
           A complete growth stack. <br /><span class="text-muted"
             >Deployed in 30 days.</span
           >
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
         {
           services.map((svc) => (
-            <div class="group card-light rounded-2xl p-7 hover:border-gold-500/50 hover:shadow-lg transition">
-              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-900 to-navy-700 flex items-center justify-center text-2xl mb-5 shadow-md shadow-navy-900/20">
+            <div class="group card-light rounded-2xl p-6 md:p-7 hover:border-gold-500/50 hover:shadow-lg transition">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-navy-900 to-navy-700 flex items-center justify-center text-2xl mb-4 md:mb-5 shadow-md shadow-navy-900/20">
                 {svc.icon}
               </div>
               <h3 class="text-lg font-bold text-navy-900 mb-2 tracking-tight">{svc.title}</h3>
@@ -186,19 +182,19 @@ const logoSrc = `${base}/growthos-ai-logo.png`;
   </section>
 
   <!-- RECEIPTS -->
-  <section id="receipts" class="relative py-24 border-t border-navy-900/8">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="max-w-3xl mb-16">
-        <div class="text-xs uppercase tracking-widest text-gold-600 mb-4 font-bold">Receipts</div>
-        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-navy-900">
+  <section id="receipts" class="relative py-16 md:py-24 border-t border-navy-900/8">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6">
+      <div class="max-w-3xl mb-10 md:mb-16">
+        <div class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-600 mb-3 md:mb-4 font-bold">Receipts</div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-navy-900">
           Numbers that move. <br /><span class="text-muted">Across niches.</span>
         </h2>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
         {
           receipts.map((r) => (
-            <div class="bg-gradient-to-br from-white to-cream-100 border border-gold-500/30 rounded-2xl p-6 shadow-md shadow-gold-500/5">
-              <div class="text-4xl md:text-5xl font-extrabold gradient-text-gold tracking-tight">
+            <div class="bg-gradient-to-br from-white to-cream-100 border border-gold-500/30 rounded-2xl p-5 md:p-6 shadow-md shadow-gold-500/5">
+              <div class="text-3xl sm:text-4xl md:text-5xl font-extrabold gradient-text-gold tracking-tight">
                 {r.num}
               </div>
               <div class="text-sm font-bold text-navy-900 mt-3">{r.label}</div>
@@ -211,22 +207,22 @@ const logoSrc = `${base}/growthos-ai-logo.png`;
   </section>
 
   <!-- FOUNDERS -->
-  <section id="founders" class="relative py-24 border-t border-navy-900/8">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="max-w-3xl mb-16">
-        <div class="text-xs uppercase tracking-widest text-gold-600 mb-4 font-bold">Founders</div>
-        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-navy-900">
+  <section id="founders" class="relative py-16 md:py-24 border-t border-navy-900/8">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6">
+      <div class="max-w-3xl mb-10 md:mb-16">
+        <div class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-600 mb-3 md:mb-4 font-bold">Founders</div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-navy-900">
           Operators, not agencies. <br /><span class="text-muted"
             >You get principals on every call.</span
           >
         </h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
         {
           founders.map((f) => (
-            <div class="card-light rounded-2xl p-7 hover:border-gold-500/50 transition">
+            <div class="card-light rounded-2xl p-6 md:p-7 hover:border-gold-500/50 transition">
               <div
-                class={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-extrabold mb-5 ${
+                class={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-extrabold mb-4 md:mb-5 ${
                   f.redacted
                     ? "bg-cream-200 text-muted ring-1 ring-navy-900/10"
                     : "bg-gradient-to-br from-gold-400 to-gold-700 text-navy-900 shadow-md shadow-gold-500/30"
@@ -237,7 +233,7 @@ const logoSrc = `${base}/growthos-ai-logo.png`;
               <h3 class={`text-xl font-bold tracking-tight ${f.redacted ? "text-muted" : "text-navy-900"}`}>
                 {f.name}
               </h3>
-              <div class="text-xs uppercase tracking-widest text-gold-600 mt-1 mb-3 font-bold">{f.role}</div>
+              <div class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-600 mt-1 mb-3 font-bold">{f.role}</div>
               <p class="text-sm leading-relaxed text-ink-700">{f.bio}</p>
             </div>
           ))
@@ -246,90 +242,29 @@ const logoSrc = `${base}/growthos-ai-logo.png`;
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section id="pricing" class="relative py-24 border-t border-navy-900/8">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="max-w-3xl mb-16">
-        <div class="text-xs uppercase tracking-widest text-gold-600 mb-4 font-bold">Investment</div>
-        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-navy-900">
-          Simple, locked pricing. <br /><span class="text-muted">No retainers in disguise.</span>
-        </h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <!-- Standard -->
-        <div class="md:col-span-2 bg-gradient-to-br from-navy-900 to-navy-700 text-cream-50 rounded-3xl p-10 ring-gold">
-          <div class="text-xs uppercase tracking-widest text-gold-400 mb-4 font-bold">Growth Stack</div>
-          <div class="space-y-6">
-            <div class="flex items-baseline justify-between border-b border-cream-50/15 pb-5">
-              <span class="text-cream-50/85">One-time setup</span>
-              <span class="text-4xl font-extrabold gradient-text-gold">$12,000</span>
-            </div>
-            <div class="flex items-baseline justify-between border-b border-cream-50/15 pb-5">
-              <span class="text-cream-50/85">Monthly retainer</span>
-              <span class="text-4xl font-extrabold gradient-text-gold">
-                $5,000<span class="text-lg text-cream-50/60">/mo</span>
-              </span>
-            </div>
-          </div>
-          <p class="text-sm text-cream-50/70 mt-6 leading-relaxed">
-            Cancel anytime with 30 days notice. Setup includes CRM build, conversion tracking,
-            voice agent training, onboarding & pipeline mapping.
-          </p>
-          <a
-            href="#book"
-            class="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full bg-gold-500 text-navy-900 font-bold hover:bg-gold-400 transition"
-          >
-            Start onboarding →
-          </a>
-        </div>
-
-        <!-- Enterprise -->
-        <div
-          class="bg-gradient-to-br from-gold-400 to-gold-700 text-navy-900 rounded-3xl p-10 shadow-lg shadow-gold-500/20"
-        >
-          <div class="text-xs uppercase tracking-widest text-navy-900/70 mb-4 font-bold">Enterprise</div>
-          <div class="text-3xl font-extrabold mb-4 leading-tight">
-            Custom-scoped
-          </div>
-          <p class="text-sm leading-relaxed text-navy-900/85">
-            For <b>$1M+ operators</b> needing full-stack growth infrastructure across multiple
-            channels and brands. Quoted on call.
-          </p>
-          <a
-            href="#book"
-            class="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full bg-navy-900 text-cream-50 font-bold hover:bg-navy-800 transition"
-          >
-            Scope a build →
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- CTA / BOOK -->
-  <section id="book" class="relative py-32 border-t border-navy-900/8">
+  <section id="book" class="relative py-20 md:py-32 border-t border-navy-900/8">
     <div class="absolute inset-0 grid-bg opacity-40"></div>
     <div
       class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full blur-[120px] opacity-25"
       style="background: radial-gradient(circle, #ecc452 0%, transparent 60%);"
     >
     </div>
-    <div class="relative max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] mb-6 text-navy-900">
+    <div class="relative max-w-4xl mx-auto px-5 sm:px-6 text-center">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.08] mb-5 md:mb-6 text-navy-900">
         Ready to install <br /><span class="gradient-text-gold">a 24/7 revenue machine?</span>
       </h2>
-      <p class="text-lg text-ink-700 max-w-2xl mx-auto mb-10 leading-relaxed">
+      <p class="text-base sm:text-lg text-ink-700 max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed">
         30-minute intro call. We diagnose your current funnel, show you the exact stack we'd
         deploy, and tell you straight up if we're a fit or not.
       </p>
       <a
         href={calendlyUrl}
-        class="inline-flex items-center gap-2 px-10 py-5 rounded-full bg-navy-900 text-cream-50 font-bold text-lg hover:bg-navy-800 transition shadow-2xl shadow-navy-900/30"
+        class="inline-flex items-center gap-2 px-8 md:px-10 py-4 md:py-5 rounded-full bg-navy-900 text-cream-50 font-bold text-base md:text-lg hover:bg-navy-800 transition shadow-2xl shadow-navy-900/30"
       >
         📅 Book a 30-min intro
       </a>
-      <div class="mt-6 text-xs uppercase tracking-widest text-muted font-semibold">
+      <div class="mt-6 text-[10px] sm:text-xs uppercase tracking-widest text-muted font-semibold">
         Or email{" "}
         <a class="text-gold-600 hover:underline" href="mailto:hello@growthos-ai.com"
           >hello@growthos-ai.com</a
@@ -349,7 +284,7 @@ const logoSrc = `${base}/growthos-ai-logo.png`;
       </div>
       <div class="flex items-center gap-6 font-semibold">
         <a href="#services" class="hover:text-gold-600 transition">Services</a>
-        <a href="#pricing" class="hover:text-gold-600 transition">Pricing</a>
+        <a href="#receipts" class="hover:text-gold-600 transition">Receipts</a>
         <a href="#book" class="hover:text-gold-600 transition">Book</a>
       </div>
     </div>
